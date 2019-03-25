@@ -1,0 +1,17 @@
+<div>
+  <br>
+  <mat-card>
+    <form [formGroup]="createUser" class="create-form">
+      <mat-form-field class="field-full-width">
+        <input matInput placeholder="Enter Email" [(ngModel)]="registerUserdata.userName" name="userName" formControlName="userName" #userName>
+      </mat-form-field>
+      <br><br>
+      <mat-form-field class="field-full-width">
+        <input matInput placeholder="Enter PassWord" [(ngModel)]="registerUserdata.password" name="password" formControlName="userName" #password>
+      </mat-form-field>
+      <mat-divider></mat-divider>
+      <br><br>
+      <button type="submit" (click)="registerUser()" [disabled]="createUser.pristine || createUser.invalid" mat-raised-button color="primary" >Register</button>
+    </form>
+  </mat-card>
+</div>
